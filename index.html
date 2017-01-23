@@ -7,7 +7,37 @@
 </head>
 <body>
 	<div id="app">
+		<h4>app1</h4>
 		{{ message }}
+	</div>
+	<div id="app2">
+		<h4>app2</h4>
+		<span v-bind:title="message">
+			Hover your mouse over me for a few seconds to see my dynamically bound title!
+		</span>
+	</div>
+	<div id="app3">
+		<h4>app3</h4>
+		<p v-if="seen">Now you see me</p>
+	</div>
+	<div id="app4">
+		<h4>app4</h4>
+		<ol>
+			<li v-for="todo in todos">
+				{{ todo.text }}
+			</li>
+		</ol>
+	</div>
+	<div id="app5">
+		<h4>app5</h4>
+		<p>{{ message }}</p>
+		<button v-on:click="reverseMessage">Reverse Message</button>
+	</div>
+	<div id="app6">
+		<h4>app6</h4>
+		<input type="text" v-model="message">
+		<p>{{ message }}</p>
+		<textarea v-model="message">{{ message }}</textarea>
 	</div>
 	<script src="https://unpkg.com/vue/dist/vue.js"></script>
 	<script src="index.js"></script>
